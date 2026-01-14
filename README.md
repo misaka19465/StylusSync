@@ -1,6 +1,6 @@
 # StylusSync
 
-StylusSync would turn your Android device into a digitizer for your computer.
+Turn your Android device into a digitizer for your computer.
 
 ## Project Overview
 
@@ -41,6 +41,12 @@ python client/main.py
 
 - Read `protocol.md` before developing to understand the message format.
 - The Python code follows standard formatting and linting practices; use a local virtual environment for testing.
+
+## TODO
+
+- [ ] Implement Windows driver.
+- [ ] Screen mirroring.
+- [ ] ...
 
 ## Credits
 
