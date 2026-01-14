@@ -9,7 +9,13 @@ Turn your Android device into a digitizer for your computer.
 - Windows VHF Driver: Not implemented yet.
 - Protocol specification: See `protocol.md`.
 
-## Running (Python client)
+## How to Use
+
+### Android App
+
+You can find prebuilt APKs in Actions artifacts (or build the Android app yourself).
+
+### Client
 
 1. It's recommended to use a virtual environment:
 
@@ -18,7 +24,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-2. Install dependencies (Linux):
+2. Install dependencies (Linux only for now):
 
 ```bash
 pip install -r client/requirements-linux.txt
