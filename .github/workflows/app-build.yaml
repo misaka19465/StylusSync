@@ -20,17 +20,17 @@ jobs:
       - name: Build Release APK
         working-directory: app-android
         run: ./gradlew assembleRelease
-      - uses: r0adkll/sign-android-release@v1
+      - name: Sign APK
+        uses: ilharp/sign-android-release@v2
         id: sign_app
         with:
-          releaseDirectory: app-android/app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-          alias: ${{ secrets.ALIAS }}
+          releaseDir: app-android/app/build/outputs/apk/release
+          signingKey: ${{ secrets.SIGNING_KEY }}
+          keyAlias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
-      - run: mv ${{steps.sign_app.outputs.signedReleaseFile}} LittleGooseOffice_$GITHUB_REF_NAME.apk
-      - uses: ncipollo/release-action@v1
+          buildToolsVersion: 36.0.0
+      - uses: actions/upload-artifact@v4
         with:
-          artifacts: "*.apk"
-          token: ${{ github.token }}
-          generateReleaseNotes: true
+          name: Signed app bundle
+          path: ${{steps.sign_app.outputs.signedFile}}
