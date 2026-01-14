@@ -26,7 +26,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
      */
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        // Create preference screen programmatically
         PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(getContext());
 
         // System preferences category
