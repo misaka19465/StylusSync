@@ -13,7 +13,7 @@ android {
         minSdk = 24
         targetSdk = 34
         if (project.hasProperty("versionCode") && project.hasProperty("versionName")) {
-            versionCode = property("versionCode") as Int
+            versionCode = (property("versionCode") as String).toInt()
             versionName = property("versionName") as String
         } else {
             versionCode = 1
