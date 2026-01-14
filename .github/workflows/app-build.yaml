@@ -11,15 +11,43 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          
+      - name: Get Git info
+        id: git_info
+        run: |
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          TIMESTAMP=$(date +%s)
+          
+          echo "COMMIT_COUNT=$COMMIT_COUNT" >> $GITHUB_ENV
+          echo "SHORT_SHA=$SHORT_SHA" >> $GITHUB_ENV
+          echo "TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
+          
+          echo "commit_count=$COMMIT_COUNT" >> $GITHUB_OUTPUT
+          echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+          
+      - name: Create version file
+        working-directory: app-android
+        run: |
+          echo "versionCode=$COMMIT_COUNT" >> app-android/gradle.properties
+          echo "versionName=$SHORT_SHA" >> app-android/gradle.properties
+          echo "buildTime=$TIMESTAMP" >> app-android/gradle.properties
+          
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 21
+          
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
+        
       - name: Build Release APK
         working-directory: app-android
-        run: ./gradlew assembleRelease
+        run: |
+          ./gradlew assembleRelease
+            
       - name: Sign APK
         uses: ilharp/sign-android-release@v2
         id: sign_app
@@ -30,7 +58,14 @@ jobs:
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
           buildToolsVersion: 36.0.0
-      - uses: actions/upload-artifact@v4
+          
+      - name: Rename Signed APK
+        run: |
+          mv "${{steps.sign_app.outputs.signedFile}}" \
+            "StylusSync-nightly-${{ env.SHORT_SHA }}-v${{ env.COMMIT_COUNT }}.apk"
+            
+      - name: Upload Signed APK
+        uses: actions/upload-artifact@v4
         with:
-          name: Signed app bundle
-          path: ${{steps.sign_app.outputs.signedFile}}
+          name: nightly-build
+          path: "StylusSync-nightly-${{ env.SHORT_SHA }}-v${{ env.COMMIT_COUNT }}.apk"
