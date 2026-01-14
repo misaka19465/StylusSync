@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StylusSync</string>
+    <string name="menu_settings">设置</string>
+
+    <string name="fullscreen">全屏模式</string>
+    <string name="menu_set_template_image">设置模板图片</string>
+    <string name="menu_clear_template_image">清除模板图片</string>
+    <string name="menu_select_another_template_image">选择其他图片</string>
+    <string name="preferences_category_drawing">绘图偏好设置</string>
+    <string name="preferences_category_system">系统偏好设置</string>
+
+    <string name="preferences_stylus_only">仅检测笔触</string>
+    <string name="preferences_stylus_only_on">仅处理笔触输入</string>
+    <string name="preferences_stylus_only_off">处理手指和笔触输入</string>
+    <string name="preferences_show_stroke_overlay">显示笔画叠加</string>
+    <string name="preferences_show_stroke_overlay_on">笔画叠加可见</string>
+    <string name="preferences_show_stroke_overlay_off">笔画叠加隐藏</string>
+    <string name="preferences_stroke_fade_speed">笔画淡出持续时间 (ms)</string>
+    <string name="preferences_canvas_theme">应用主题</string>
+    <string name="preferences_canvas_theme_dark">深色</string>
+    <string name="preferences_canvas_theme_light">浅色</string>
+    <string name="preferences_canvas_theme_system">跟随系统</string>
+    <string name="preferences_keep_display_active">保持屏幕激活</string>
+    <string name="preferences_keep_display_active_on">StylusSync激活时屏幕不会关闭</string>
+    <string name="preferences_keep_display_active_off">屏幕将根据系统设置关闭</string>
+
+    <string name="preferences_display_category">显示偏好设置</string>
+    <string name="preferences_grid_visible">显示网格</string>
+    <string name="preferences_grid_visible_on">网格线可见</string>
+    <string name="preferences_grid_visible_off">网格线隐藏</string>
+    <string name="preferences_grid_opacity">网格不透明度</string>
+    <string name="preferences_template_opacity">模板不透明度</string>
+    <string name="preferences_template_scale_mode">模板缩放模式</string>
+    <string name="preferences_template_scale_fit_center">居中适应</string>
+    <string name="preferences_template_scale_fit_xy">拉伸填充</string>
+    <string name="preferences_template_scale_center_crop">居中裁剪</string>
+    <string name="preferences_template_scale_center_inside">居中内部</string>
+    <string name="preferences_reset">重置%s</string>
+    <string name="midi_init_failed">MIDI初始化失败</string>
+    <string name="fullscreen_hint">按返回键退出全屏模式。</string>
+    <string name="storage_permission_required">选择模板图片需要存储权限</string>
+    <string name="template_image_set">模板图片已设置</string>
+    <string name="cannot_load_image">无法加载图片</string>
+    <string name="image_loading_failed">图片加载失败：%s</string>
+    <string name="template_image_cleared">模板图片已清除</string>
+    <string name="cannot_display_template_image">无法显示模板图片</string>
+
+    <!-- UI messages -->
+    <string name="waiting_for_midi">等待MIDI设备...\n\n请通过USB或蓝牙连接到电脑</string>
+
+    <!-- Log messages (通常不需要翻译，但为了完整性保留) -->
+    <string name="log_system_ui_changed">系统UI改变 %d</string>
+    <string name="log_midi_device_connected">MIDI设备已连接：%s</string>
+    <string name="log_midi_error">MIDI错误：%s</string>
+    <string name="log_midi_device_disconnected">MIDI设备已断开：%s</string>
+    <string name="log_midi_input_port_opened">MIDI输入端口已打开：%d</string>
+    <string name="log_midi_send_error">MIDI发送错误：%s</string>
+    <string name="log_canvas_size_changed">画布尺寸改变：%1$dx%2$d（之前：%3$dx%4$d）</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <!-- Base application theme using Material 3 Dynamic Colors -->
+    <style name="Base.Theme.StylusSync" parent="Theme.Material3.DynamicColors.DayNight">
+        <!-- Dynamic colors will be automatically applied from wallpaper -->
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryContainer</item>
+    </style>
+
+    <style name="AppTheme" parent="Base.Theme.StylusSync" />
+</resources>

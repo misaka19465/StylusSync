@@ -1,0 +1,36 @@
+root = true
+
+[*.{py,pyi}]
+charset = utf-8
+indent_style = space
+indent_size = 4
+tab_width = 4
+max_line_length = 88
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.java]
+charset = utf-8
+indent_style = space
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+
+[*.{c,cpp,h,hpp}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+max_line_length = 100
+end_of_line = lf
+
+[*.xml]
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+
+[*.md]
+trim_trailing_whitespace = false
+insert_final_newline = true

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- MIDI feature requirement -->
+    <uses-feature 
+        android:name="android.software.midi" 
+        android:required="true"/>
+    
+    <!-- Bluetooth MIDI permissions (optional) -->
+    <uses-feature 
+        android:name="android.hardware.bluetooth_le" 
+        android:required="false"/>
+    
+    <!-- Android 13 (API 33) requires explicit runtime permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- Android 13+ uses fine-grained media permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    
+    <!-- Bluetooth permissions (for Bluetooth MIDI) -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30"/>
+    <!-- Android 12+ Bluetooth permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s"/>
+
+    <uses-configuration android:reqTouchScreen="stylus"/>
+    <uses-configuration android:reqTouchScreen="finger"/>
+
+    <application
+        android:name=".StylusSyncApplication"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:enableOnBackInvokedCallback="true"
+        android:supportsRtl="true"
+        tools:targetApi="tiramisu">
+        
+        <activity
+            android:name="team.misakanet.stylussync.ui.activity.CanvasActivity"
+            android:screenOrientation="sensorLandscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="team.misakanet.stylussync.ui.activity.SettingsActivity"
+            android:label="@string/menu_settings"
+            android:parentActivityName=".ui.activity.CanvasActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="team.misakanet.stylussync.ui.activity.CanvasActivity" />
+        </activity>
+    </application>
+
+</manifest>

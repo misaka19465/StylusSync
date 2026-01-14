@@ -1,0 +1,4 @@
+# Linux-specific requirements
+# Reference base requirements and add linux-only packages
+-r requirements.txt
+python-evdev>=1.4

@@ -1,0 +1,25 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_set_template_image"
+        android:icon="@drawable/ic_image"
+        android:onClick="setTemplateImage"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_set_template_image"/>
+
+    <item
+        android:id="@+id/menu_fullscreen"
+        android:icon="@drawable/ic_fullscreen"
+        android:onClick="switchFullScreen"
+        app:showAsAction="ifRoom"
+        android:title="@string/fullscreen"/>
+
+    <item
+        android:icon="@drawable/ic_settings"
+        android:onClick="showSettings"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_settings"/>
+
+</menu>
