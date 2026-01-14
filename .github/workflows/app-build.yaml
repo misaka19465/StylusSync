@@ -31,9 +31,9 @@ jobs:
       - name: Create version file
         working-directory: app-android
         run: |
-          echo "versionCode=$COMMIT_COUNT" >> app-android/gradle.properties
-          echo "versionName=$SHORT_SHA" >> app-android/gradle.properties
-          echo "buildTime=$TIMESTAMP" >> app-android/gradle.properties
+          echo "versionCode=$COMMIT_COUNT" >> gradle.properties
+          echo "versionName=$SHORT_SHA" >> gradle.properties
+          echo "buildTime=$TIMESTAMP" >> gradle.properties
           
       - uses: actions/setup-java@v5
         with:
