@@ -1,0 +1,3 @@
+# Base Python requirements for StylusSync
+# Core dependencies used by the client
+python-rtmidi>=1.3

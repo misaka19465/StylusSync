@@ -1,0 +1,65 @@
+[project]
+name = "stylussync-client"
+version = "0.1.0"
+description = "StylusSync client"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [ { name = "Misaka 19465", email = "19465@misakanet.team" } ]
+dependencies = [
+  "typing-extensions>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=23.0",
+  "isort>=5.0",
+  "ruff>=0.12",
+  "pytest>=7.0",
+  "pytest-cov",
+  "mypy>=0.991",
+  "coverage",
+  "pylint",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=client --cov-report=term-missing"
+testpaths = ["client", "tests"]
+
+[tool.mypy]
+python_version = 3.9
+check_untyped_defs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+source = ["client"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 80
+
+/(
+  \.git
+| \.venv
+| build
+| dist
+| .eggs
+| env
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C", "B"]
+ignore = ["E203", "W503"]

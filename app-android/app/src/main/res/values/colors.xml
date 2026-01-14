@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Light Theme Colors - Based on Purple/Pink palette -->
+    <color name="md_theme_light_primary">#8F5AD1</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#EDDCFF</color>
+    <color name="md_theme_light_onPrimaryContainer">#2D004D</color>
+    
+    <color name="md_theme_light_secondary">#F32EAC</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#FFD8EC</color>
+    <color name="md_theme_light_onSecondaryContainer">#3E0027</color>
+    
+    <color name="md_theme_light_tertiary">#7E5260</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FFD9E3</color>
+    <color name="md_theme_light_onTertiaryContainer">#31101D</color>
+    
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+    
+    <color name="md_theme_light_background">#FFFBFF</color>
+    <color name="md_theme_light_onBackground">#1D1B1E</color>
+    
+    <color name="md_theme_light_surface">#FFFBFF</color>
+    <color name="md_theme_light_onSurface">#1D1B1E</color>
+    <color name="md_theme_light_surfaceVariant">#E8E0EB</color>
+    <color name="md_theme_light_onSurfaceVariant">#4A454E</color>
+    
+    <color name="md_theme_light_outline">#7B757F</color>
+    <color name="md_theme_light_outlineVariant">#CCC4CF</color>
+    
+    <!-- Material 3 Dark Theme Colors -->
+    <color name="md_theme_dark_primary">#D5BAFF</color>
+    <color name="md_theme_dark_onPrimary">#4B1A7C</color>
+    <color name="md_theme_dark_primaryContainer">#6738A4</color>
+    <color name="md_theme_dark_onPrimaryContainer">#EDDCFF</color>
+    
+    <color name="md_theme_dark_secondary">#FFB0DD</color>
+    <color name="md_theme_dark_onSecondary">#650042</color>
+    <color name="md_theme_dark_secondaryContainer">#8E0060</color>
+    <color name="md_theme_dark_onSecondaryContainer">#FFD8EC</color>
+    
+    <color name="md_theme_dark_tertiary">#EFB8C8</color>
+    <color name="md_theme_dark_onTertiary">#4A2532</color>
+    <color name="md_theme_dark_tertiaryContainer">#633B48</color>
+    <color name="md_theme_dark_onTertiaryContainer">#FFD9E3</color>
+    
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
+    
+    <color name="md_theme_dark_background">#1D1B1E</color>
+    <color name="md_theme_dark_onBackground">#E6E1E6</color>
+    
+    <color name="md_theme_dark_surface">#1D1B1E</color>
+    <color name="md_theme_dark_onSurface">#E6E1E6</color>
+    <color name="md_theme_dark_surfaceVariant">#4A454E</color>
+    <color name="md_theme_dark_onSurfaceVariant">#CCC4CF</color>
+    
+    <color name="md_theme_dark_outline">#958E99</color>
+    <color name="md_theme_dark_outlineVariant">#4A454E</color>
+</resources>

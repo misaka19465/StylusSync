@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StylusSync</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="fullscreen">Full-screen mode</string>
+    <string name="menu_set_template_image">Set template image</string>
+    <string name="menu_clear_template_image">Clear template image</string>
+    <string name="menu_select_another_template_image">Select another image</string>
+    <string name="preferences_category_drawing">Drawing preferences</string>
+    <string name="preferences_category_system">System preferences</string>
+
+    <string name="preferences_stylus_only">Sense stylus only</string>
+    <string name="preferences_stylus_only_on">Only stylus input will be processed</string>
+    <string name="preferences_stylus_only_off">Finger and stylus input will be processed</string>
+    <string name="preferences_show_stroke_overlay">Show stroke overlay</string>
+    <string name="preferences_show_stroke_overlay_on">Stroke overlay is visible</string>
+    <string name="preferences_show_stroke_overlay_off">Stroke overlay is hidden</string>
+    <string name="preferences_stroke_fade_speed">Stroke fade duration (ms)</string>
+    <string name="preferences_canvas_theme">App theme</string>
+    <string name="preferences_canvas_theme_dark">Dark</string>
+    <string name="preferences_canvas_theme_light">Light</string>
+    <string name="preferences_canvas_theme_system">Follow system</string>
+    <string name="preferences_keep_display_active">Keep display active</string>
+    <string name="preferences_keep_display_active_on">Display won\'t turn off while StylusSync is active</string>
+    <string name="preferences_keep_display_active_off">Display will turn off according to system settings</string>
+
+    <string name="preferences_display_category">Display preferences</string>
+    <string name="preferences_grid_visible">Show grid</string>
+    <string name="preferences_grid_visible_on">Grid lines are visible</string>
+    <string name="preferences_grid_visible_off">Grid lines are hidden</string>
+    <string name="preferences_grid_opacity">Grid opacity</string>
+    <string name="preferences_template_opacity">Template opacity</string>
+    <string name="preferences_template_scale_mode">Template scale mode</string>
+    <string name="preferences_template_scale_fit_center">Fit center</string>
+    <string name="preferences_template_scale_fit_xy">Stretch to fill</string>
+    <string name="preferences_template_scale_center_crop">Center crop</string>
+    <string name="preferences_template_scale_center_inside">Center inside</string>
+    <string name="preferences_reset">Reset%s</string>
+    <string name="midi_init_failed">MIDI initialization failed</string>
+    <string name="fullscreen_hint">Press Back button to leave full-screen mode.</string>
+    <string name="storage_permission_required">Storage permission required to select template image</string>
+    <string name="template_image_set">Template image set</string>
+    <string name="cannot_load_image">Cannot load image</string>
+    <string name="image_loading_failed">Image loading failed: %s</string>
+    <string name="template_image_cleared">Template image cleared</string>
+    <string name="cannot_display_template_image">Cannot display template image</string>
+
+    <!-- UI messages -->
+    <string name="waiting_for_midi">Waiting for MIDI device...\n\nPlease connect to computer via USB or Bluetooth</string>
+
+    <!-- Log messages -->
+    <string name="log_system_ui_changed">System UI changed %d</string>
+    <string name="log_midi_device_connected">MIDI device connected: %s</string>
+    <string name="log_midi_error">MIDI error: %s</string>
+    <string name="log_midi_device_disconnected">MIDI device disconnected: %s</string>
+    <string name="log_midi_input_port_opened">MIDI input port opened: %d</string>
+    <string name="log_midi_send_error">MIDI send error: %s</string>
+    <string name="log_canvas_size_changed">Canvas size changed: %1$dx%2$d (before: %3$dx%4$d)</string>
+
+</resources>
