@@ -1,0 +1,47 @@
+name: Android Unit Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit-tests:
+    name: Run Android unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Cache Gradle
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Make gradlew executable
+        run: chmod +x app-android/gradlew
+
+      - name: Install Android SDK components
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          arch: x86_64
+          target: default
+          components: build-tools;30.0.3,platforms;android-30,platform-tools
+          script: echo "Android SDK components installed"
+
+      - name: Run unit tests (Gradle)
+        working-directory: app-android
+        run: |
+          ./gradlew --version
+          ./gradlew testDebugUnitTest --stacktrace --no-daemon || ./gradlew test --stacktrace --no-daemon
