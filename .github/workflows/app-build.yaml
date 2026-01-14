@@ -1,7 +1,7 @@
 name: Build nightly Android app
 on:
   push:
-    branches: [ main, feature/actions ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
