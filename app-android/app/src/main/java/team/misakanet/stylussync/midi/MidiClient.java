@@ -17,7 +17,6 @@ import team.misakanet.stylussync.listener.MidiConnectionListener;
 
 /**
  * Handles MIDI communication for sending touch events to a connected computer.
- * This class replaces the original NetworkClient and manages MIDI device connections and data transmission.
  */
 public class MidiClient implements Runnable {
     private static final String TAG = "MidiClient";
@@ -95,7 +94,22 @@ public class MidiClient implements Runnable {
         }
         
         // Try to open the first available MIDI device
-        openMidiDevice(devices[0]);
+        //openMidiDevice(devices[0]);
+        // Actually some devices have some weird builtin MIDI port.
+        // Make sure to open only USB MIDI devices.
+        for (MidiDeviceInfo device : devices) {
+            if (device.getType() == MidiDeviceInfo.TYPE_USB) {
+                try{
+                    openMidiDevice(device);
+                }
+                catch (Exception e) {
+                    Log.e(TAG, "Error opening MIDI device: ", e);
+                    continue;
+                }
+
+                break;
+            }
+        }
         
         return true;
     }

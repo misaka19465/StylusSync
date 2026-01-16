@@ -1,6 +1,6 @@
 # StylusSync
 
-StylusSync would turn your Android device into a digitizer for your computer.
+Turn your Android device into a digitizer for your computer.
 
 ## Project Overview
 
@@ -9,7 +9,15 @@ StylusSync would turn your Android device into a digitizer for your computer.
 - Windows VHF Driver: Not implemented yet.
 - Protocol specification: See `protocol.md`.
 
-## Running (Python client)
+## How to Use
+
+### Android App
+
+You can find prebuilt APKs in Actions artifacts (or build the Android app yourself).
+
+To use the app, connect your Android device to your computer via USB cable. Ensure the USB mode is set to **MIDI** !
+
+### Client
 
 1. It's recommended to use a virtual environment:
 
@@ -18,7 +26,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-2. Install dependencies (Linux):
+2. Install dependencies (Linux only for now):
 
 ```bash
 pip install -r client/requirements-linux.txt
@@ -41,6 +49,12 @@ python client/main.py
 
 - Read `protocol.md` before developing to understand the message format.
 - The Python code follows standard formatting and linting practices; use a local virtual environment for testing.
+
+## TODO
+
+- [ ] Implement Windows driver.
+- [ ] Screen mirroring.
+- [ ] ...
 
 ## Credits
 
