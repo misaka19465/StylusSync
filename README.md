@@ -15,6 +15,8 @@ Turn your Android device into a digitizer for your computer.
 
 You can find prebuilt APKs in Actions artifacts (or build the Android app yourself).
 
+To use the app, connect your Android device to your computer via USB cable. Ensure the USB mode is set to **MIDI** !
+
 ### Client
 
 1. It's recommended to use a virtual environment:
