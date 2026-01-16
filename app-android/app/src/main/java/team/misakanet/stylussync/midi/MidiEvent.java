@@ -4,7 +4,6 @@ import android.util.Log;
 
 /**
  * Represents a MIDI event that encapsulates touch event data and converts it to MIDI messages.
- * This class replaces the original NetEvent and handles different types of touch interactions.
  */
 public class MidiEvent {
     private static final String TAG = "MidiEvent";
